@@ -1,0 +1,316 @@
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(189, 189, 189);
+}
+
+section .contact, section .employees .employee, section .employees, section .booktablebutton, .container .meal, .container .discover, .container .present, .container .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .menulist {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.container .navbar {
+  justify-content: start;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+.container .navbar #check:checked ~ ul {
+  left: 0;
+}
+.container .navbar .checkbtn {
+  margin-left: 230px;
+  font-size: 20px;
+  padding: 0 10px 0 0;
+  display: none;
+}
+@media (max-width: 600px) {
+  .container .navbar .checkbtn {
+    display: block;
+  }
+}
+.container .navbar #check {
+  display: none;
+}
+@media (max-width: 400px) {
+  .container .navbar h1 {
+    font-size: 15px;
+  }
+}
+.container .navbar h1 a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.container .navbar ul {
+  float: right;
+  list-style-type: none;
+  cursor: pointer;
+  color: rgb(97, 97, 97);
+  font-size: 14px;
+  transition: 1s;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .container .navbar ul {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 22;
+    top: 38px;
+    left: 585px;
+    text-align: center;
+    color: white;
+  }
+}
+@media (max-width: 600px) {
+  .container .navbar ul li {
+    display: block;
+    margin: 40px;
+  }
+}
+.container .navbar ul li a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+  transition: 1s;
+}
+@media (max-width: 400px) {
+  .container .navbar ul li a {
+    font-size: 12px;
+  }
+}
+.container .navbar ul li a:hover {
+  color: white;
+}
+.container .present img {
+  width: 100%;
+  filter: brightness(50%);
+}
+.container .present .options {
+  position: absolute;
+  color: white;
+  text-align: center;
+}
+.container .present .options h1 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+@media (max-width: 400px) {
+  .container .present .options h1 {
+    font-size: 20px;
+  }
+}
+.container .present .options h4 {
+  font-size: 15px;
+  padding: 15px 0;
+}
+@media (max-width: 400px) {
+  .container .present .options h4 {
+    font-size: 10px;
+  }
+}
+.container .present .options .seemenu, .container .present .options .booktable {
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 5px;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #a3a3a3;
+  transition: ease-out 1s;
+}
+.container .present .options .seemenu:hover, .container .present .options .booktable:hover {
+  box-shadow: inset 400px 0 0 0 #c0c0c0;
+}
+@media (max-width: 400px) {
+  .container .present .options .seemenu, .container .present .options .booktable {
+    font-size: 10px;
+  }
+}
+.container .discover {
+  padding: 42px 0;
+}
+.container .discover h3 {
+  width: 40%;
+  text-align: center;
+  color: rgb(97, 97, 97);
+  font-size: 10px;
+}
+.container .discover h1, .container .discover h3 {
+  margin: 0 50px;
+}
+@media (max-width: 500px) {
+  .container .discover h1, .container .discover h3 {
+    width: 100%;
+    margin: 5px;
+  }
+}
+.container .ourpromise {
+  background-color: black;
+  color: white;
+}
+.container h1 {
+  padding: 20px 0;
+  font-size: 25px;
+  text-align: center;
+}
+.container .meal {
+  margin: 25px 0;
+  padding: 0 300px;
+}
+@media (max-width: 1200px) {
+  .container .meal {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  .container .meal img {
+    width: 100%;
+  }
+}
+.container img {
+  width: 400px;
+}
+.container .info h2, .container .info h4 {
+  padding: 15px 30px;
+  float: right;
+  text-align: right;
+  transition: 1s;
+}
+
+section .booktablebutton img {
+  width: 100%;
+  height: 350px;
+  margin-top: -25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .booktablebutton .booktable {
+  position: absolute;
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #a3a3a3;
+  transition: ease-out 1s;
+}
+section .booktablebutton .booktable:hover {
+  box-shadow: inset 400px 0 0 0 #c0c0c0;
+}
+
+section h1 {
+  color: white;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  font-size: 25px;
+  background-color: black;
+}
+section .employees {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+@media (max-width: 1150px) {
+  section .employees {
+    display: block;
+  }
+}
+section .employees .employee {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+  margin: 50px;
+  transition: 1s;
+}
+@media (max-width: 1150px) {
+  section .employees .employee {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (max-width: 600px) {
+  section .employees .employee {
+    width: 90%;
+    margin: auto;
+  }
+}
+section .employees .employee img {
+  width: 150px;
+}
+section .employees .employee .employeeinfo {
+  text-align: center;
+}
+section .employees .employee .employeeinfo h2 {
+  font-size: 25px;
+  padding: 0 0 20px 0;
+}
+section .employees .employee .employeeinfo h4 {
+  font-size: 13px;
+  color: rgb(97, 97, 97);
+  padding: 1px;
+}
+
+section .contact {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: black;
+  color: white;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+section .location pre {
+  font-size: 12px;
+}
+section .workinghours pre {
+  font-size: 12px;
+}
+
+p {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

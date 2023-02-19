@@ -1,0 +1,328 @@
+@import "colors";
+
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(189, 189, 189);
+}
+
+%displayf{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+%displayb{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    .navbar{
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .checkbtn{
+            margin-left: 230px;
+            font-size: 20px;
+            padding: 0 10px 0 0;
+            display: none;
+            @media(max-width:600px){
+                display: block;
+            }
+        }
+        #check{
+            display: none;
+        }
+        h1{
+            @media(max-width:400px){
+                font-size: 15px;
+            }
+            a{
+
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+            }
+        }
+       @extend %displayf;
+       justify-content: start;
+        width: 100%;
+        height: 40px;
+        background-color: $bl;
+        color: $wh;
+        ul{
+            float: right;
+            list-style-type: none;
+            cursor: pointer;
+            color: $gr;
+            font-size: 14px;
+            transition: 1s;
+            display: flex;
+            @media(max-width:600px){
+                position: fixed;
+                display: block;
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(0, 0, 0);
+                z-index: 22;
+                top: 38px;
+                left: 585px;
+                text-align: center;
+                color: $wh;
+            }
+            li{
+                @media(max-width:600px){
+                    display: block;
+                    margin: 40px;
+                    // line-height: 30px;
+            }
+            a{
+                margin-left: 30px;
+                @media(max-width:400px){
+                    font-size: 12px;
+                }
+                text-decoration: none;
+                color: $gr;
+                transition: 1s;
+                &:hover{
+                    color: $wh
+                }
+            }
+
+        }
+    }
+}
+    .present{
+       @extend %displayf;
+       img{
+        width: 100%;
+        filter: brightness(50%);
+       }
+       .options{
+        position: absolute;
+        color: $wh;
+        text-align: center;
+        h1{
+            @media(max-width:400px){
+                font-size: 20px;
+            }
+            font-size: 30px;
+            padding: 10px 0;
+        }
+        h4{
+            @media(max-width:400px){
+                font-size: 10px;
+            }
+            font-size: 15px;
+            padding: 15px 0;
+        }
+        .seemenu, .booktable{
+            color: #ffffff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            padding: 8px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 10px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 #a3a3a3;
+            transition: ease-out 1s;
+            &:hover{
+                box-shadow: inset 400px 0 0 0 #c0c0c0;
+            }
+            @media(max-width:400px){
+                font-size: 10px;
+            }
+          }
+        }
+    }
+    .discover{
+        @extend %displayf;
+        padding: 42px 0;
+       
+        h3{
+            width: 40%;
+            text-align: center;
+            color: $gr;
+            font-size: 10px;
+        }
+        h1,h3{
+            margin: 0 50px;
+            @media(max-width:500px){
+                width: 100%;
+                margin: 5px;
+            }
+        }
+        
+    }
+    .ourpromise{
+        background-color: $bl;
+        color: $wh;
+        }
+        h1{
+            padding: 20px 0;
+            font-size: 25px;
+            text-align: center;
+        }
+        .menulist{
+            @extend %displayb;
+        }
+        .meal{
+            @media(max-width:1200px){
+                display: block;
+                flex-direction: column;
+                text-align: center;
+                padding: 0;
+                img{
+                    width: 100%;
+                }
+            }
+            margin: 25px 0;
+            @extend %displayf;
+            padding: 0 300px;
+            }
+            img{
+                width: 400px;
+            }
+            .info{   
+                h2,h4{
+                    padding: 15px 30px;
+                    float: right;
+                    text-align: right;
+                    transition: 1s;
+                }
+            }
+        }
+    section{
+        .booktablebutton{
+            @extend %displayf;
+         img{
+            width: 100%;
+            height: 350px;
+            margin-top: -25px;
+            object-fit: cover;
+        }
+        .booktable{
+            position: absolute;
+            color: #ffffff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 13px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 #a3a3a3;
+            transition: ease-out 1s;
+            &:hover{
+            box-shadow: inset 400px 0 0 0 #c0c0c0;
+           } 
+         }
+      } 
+    }
+    section{
+        h1{
+            color: $wh;
+            text-align: center;
+            padding: 40px 0 20px 0;
+            font-size: 25px;
+            background-color: $bl;
+        }
+        .employees{
+            padding: 5px;
+
+            @extend %displayf;
+            background-color: $bl;
+            color: $wh;
+            @media(max-width:1150px){
+                display: block;
+            }
+            .employee{
+                background-color: $wh;
+                color: $bl;
+                @extend %displayf;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin: auto;
+                margin: 50px;
+                transition: 1s;
+                @media(max-width:1150px){
+                    width: 60%;
+                    margin: auto;
+                }
+                @media(max-width:600px){
+                    width: 90%;
+                    margin: auto;
+                }
+                img{
+                    width: 150px;
+                }
+                .employeeinfo{
+                    text-align: center;
+                    h2{
+                        font-size: 25px;
+                        padding: 0 0 20px 0;
+                    }
+                    h4{
+                        font-size: 13px;
+                        color: $gr;
+                        padding: 1px;
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .contact{
+            user-select: none;
+            @extend %displayf;
+            background: $bl;
+            color: $wh;
+            justify-content: space-evenly;
+            font-size: 20px;
+        }
+        .location{
+            pre{
+                font-size: 12px;
+            }
+        }
+        .workinghours {
+            pre{
+                font-size: 12px;
+            }
+        }
+    }
+    
+    p{
+        text-align: center;
+        background-color: $bl;
+        color: $wh;
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
